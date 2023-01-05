@@ -1,5 +1,6 @@
 import Signup from "./signup/Signup";
 import { Col, Container, Row } from "reactstrap";
+import Login from "./login/Login";
 const Auth = (props) => {
   return (
     <>
@@ -11,7 +12,7 @@ const Auth = (props) => {
             <Signup />
           </Col>
           <Col md="6">
-            <Signup />
+            <Login />
           </Col>
         </Row>
       </Container>
