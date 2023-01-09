@@ -4,15 +4,13 @@ import Login from "./login/Login";
 const Auth = (props) => {
   return (
     <>
-      <h2>Hello from Auth</h2>
-
       <Container>
         <Row>
           <Col md="6">
-            <Signup />
+            <Signup updateToken={props.updateToken} />
           </Col>
           <Col md="6">
-            <Login />
+            <Login updateToken={props.updateToken} />
           </Col>
         </Row>
       </Container>
