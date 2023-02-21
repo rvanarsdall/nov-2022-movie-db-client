@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { Button, Form, FormGroup, Input, Label } from "reactstrap";
+import APIURL from "../../../helper/environment";
 import FullWidthButton from "../../Buttons/FullWidthButton";
 
 const Login = (props) => {
@@ -15,7 +16,7 @@ const Login = (props) => {
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
 
-    let url = `http://localhost:4000/user/login`;
+    let url = `${APIURL}/user/login`;
 
     let bodyObject = JSON.stringify({ email, password });
 

@@ -11,6 +11,7 @@ import {
   Label,
   Alert,
 } from "reactstrap";
+import APIURL from "../../helper/environment";
 import FullWidthButton from "../Buttons/FullWidthButton";
 
 const MovieEdit = (props) => {
@@ -26,7 +27,7 @@ const MovieEdit = (props) => {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    let url = `http://localhost:4000/movie/update/${id}`;
+    let url = `${APIURL}/movie/update/${id}`;
 
     let bodyObj = JSON.stringify({
       movieTitle,
@@ -65,7 +66,7 @@ const MovieEdit = (props) => {
     }
   }
   const fetchMovie = async () => {
-    const url = `http://localhost:4000/movie/${id}`;
+    const url = `${APIURL}/movie/${id}`;
     let myHeaders = new Headers();
     myHeaders.append("Authorization", props.token);
 

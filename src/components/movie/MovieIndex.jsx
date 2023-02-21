@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 
 import { Col, Container, Row } from "reactstrap";
+import APIURL from "../../helper/environment";
 import MovieCreate from "./MovieCreate";
 import MovieTable from "./MovieTable";
 
 const MovieIndex = (props) => {
   const [movies, setMovies] = useState([]);
   const fetchMovies = async () => {
-    const url = `http://localhost:4000/movie/`;
+    const url = `${APIURL}/movie/`;
     let myHeaders = new Headers();
     myHeaders.append("Authorization", props.token);
 

@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 
 import { Button, Form, FormGroup, Input, Label } from "reactstrap";
+import APIURL from "../../../helper/environment";
 
 const Signup = (props) => {
   const [firstName, setFirstName] = useState("");
@@ -12,7 +13,7 @@ const Signup = (props) => {
     e.preventDefault();
     console.log(firstName);
 
-    let url = `http://localhost:4000/user/signup`;
+    let url = `${APIURL}/user/signup`;
     let bodyObject = JSON.stringify({ firstName, lastName, email, password });
 
     let myHeaders = new Headers();
